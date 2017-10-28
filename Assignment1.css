@@ -1,0 +1,38 @@
+body
+    {
+        font-family: Segoe UI;     
+    }
+
+#dropDown
+    {
+        font-family: courier ;
+        margin: 0 ;
+        padding: 0;
+    }
+    
+section.Thanksgiving
+    {
+        position: relative;
+        width: 600px;
+        display: none;
+        overflow: scroll;
+    }
+
+section.Christmas
+    {
+        position: relative;
+        width: 600px;
+        display: none;
+        overflow: scroll;   
+    }
+
+#divf
+    {
+        background-color: #c93030;
+        bottom: 0;
+        color: #FFFFFF;
+        line-height: 35px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
