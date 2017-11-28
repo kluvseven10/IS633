@@ -1,0 +1,162 @@
+/*START MAIN*/
+html, body{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	overflow-y: scroll;	
+}
+
+a{
+	color: #000000;
+	text-decoration: none;
+}
+
+h1, h2{
+	margin: 0;
+	padding: 0;
+}
+
+hr{
+	border: solid 1px #dddddd;
+}
+
+section h2{
+	margin: .5em 0;
+}
+
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+	table tr:nth-child(even) {
+		background-color: #f2f2f2
+	}
+
+	table th{
+		border-bottom: solid 1px #dddddd;
+		padding: .2em;
+		text-align: left;
+	}
+
+	table td{
+		border-bottom: solid 1px #dddddd;
+		padding: .2em;
+	}
+
+#header{
+	background-color: #CEDCE9;
+	color: #555555;
+	line-height: 68px;
+	padding: 0 1em;
+	text-align: center;
+}
+
+#content{
+	margin-bottom: 30px;
+	padding: 1em;
+	width: 600px;
+	margin: auto;
+   
+}
+
+#div_f{
+	background-color: #CEDCE9;
+	bottom: 0;
+	color: #555555;
+	line-height: 35px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+.static{
+	font-weight: bold;
+}
+
+/*END MAIN*/
+
+
+
+
+
+.fieldLabel{
+	color: #777777;
+	display: block;
+	font-weight: bold;
+}
+
+select, input[type=text]{
+	border: solid 1px #cccccc;
+	border-radius: 3px;
+	margin: .5em .5em;
+	padding: .3em;
+}
+
+section{
+	display: none;
+	width: 100%;
+}
+
+#actions{
+	padding: 1em;
+}
+
+	#actions input[type=button]{
+		border: #9DAEFA;
+		border-radius: 5px;
+		color: #555555;
+		margin-right: 7px;
+		padding: 7px;
+	}
+	
+	#actions input[type=button]:hover{
+		background-color: #808080;
+	}
+
+#backButton{
+	padding: 1em;
+}
+	#backButton{
+		border: #9DAEFA;
+		border-radius: 5px;
+		color: #555555;
+		margin-right: 7px;
+		padding: 7px;
+		}
+	
+	#backButton:hover{
+		cursor: pointer;
+		background-color: #808080;
+	}
+
+	#backButton input[type=button]:hover{
+			background-color: #808080;
+		}
+
+
+#customerListing a{
+	color: #0000ff;
+	text-decoration: underline;
+}
+
+#filters{
+	width: 100%;
+	text-align: center;
+}
+
+.tableButton{
+	background: none;
+	border: none;
+	color: #0000ff;
+}
+
+	.tableButton:hover{
+		cursor: pointer;
+		text-decoration: underline;
+	}
+	
+
+
