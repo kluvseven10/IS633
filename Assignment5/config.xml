@@ -15,6 +15,6 @@
     <plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
     <plugin name="cordova-plugin-geolocation" source="npm" />
-    <icon src="icon.png" />
-    <splash src="splash.png" />
+    <icon src="Assignment5/icon.png" />
+    <splash src="Assignment5/splash.png" />
 </widget>
