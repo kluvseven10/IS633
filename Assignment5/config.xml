@@ -14,27 +14,7 @@
     <preference name="phonegap-version" value="cli-7.0.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
-    <plugin name="cordova-plugin-geolocation" source="npm" />
-    <platform name="ios">
-        <icon src="icon.png" width="180" height="180" />
-    </platform>
-    <platform name="android">
-        <icon src="icon.png" width="180" height="180" />
-    </platform>
-    <platform name="winphone">
-        <icon src="icon.png" width="180" height="180" />
-    </platform>
-    <platform name="ios">
-        <splash src="splash.png" width="320" height="480" />
-        <splash src="splash.png" width="640" height="960" />
-    </platform>
-    <platform name="android">     
-        <splash src="splash.png" qualifier="port-xxhdpi" />
-        <splash src="splash.png" qualifier="land-xxhdpi" />
-        <splash src="splash.png" qualifier="xxxhdpi" />
-    </platform>
-    <platform name="winphone">
-        <splash width="1152" height="1920" src="splash.png" />
-        <splash width="620"  height="300"  src="splash.png" />
-    </platform>
+    <plugin name="cordova-plugin-geolocation" source="npm" />    
+    <icon src="icon.png" platform="ios" width="180" height="180" />
+    <splash src="splash.png" platform="ios" width="320" height="480" />
 </widget>
