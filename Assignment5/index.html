@@ -4,7 +4,7 @@
 		<title>Mod 5, Assignment 5; IS633 - MOBILE</title>
 		<link rel="stylesheet" type="text/css" href="styles/Assignment5.css">
 		<script src="js/Assignment5.js"></script>
-		<!--<script src="js/geolocation-marker.js"></script>-->
+
 	</head>
 	<body>
 		<header id="header">
@@ -131,7 +131,7 @@
 			
 			<section id="geoLocation">
 				<hr>
-				<button id="locationbutton" onclick="Location();">Find Current Location</button>
+				<button id="locationbutton" onclick="Location();" onlick="initMap();" >Find Current Location</button>
 				<br>
 				<br>
 				<label>Latitude:</label>
@@ -139,10 +139,24 @@
 				<br>
 				<label>Longitude:</label>
 				<label id="longitude">Longitude Result</label>
+				<br>
+				<script id="map">
+					function initMap() {
+					  var uluru = {lat: -25.363, lng: 131.044};
+					  var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 4,
+						center: uluru
+					  });
+					  var marker = new google.maps.Marker({
+						position: uluru,
+						map: map
+					  });
+					}
+				  </script>
+				  <script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrPMCBudCWiZorhtZCjW-J3aTWDYlWU4k&callback=initMap">
+				  </script>
 				
-				<!--https://www.npmjs.com/package/geolocation-marker-->
-				<!--Check how to call for more than one function on an onclick-possibly create two new var for the result set of long/lat...maybe
-				it is .innerHTML.value or add the geolocation-marker to the Location() or showPosition() function-->
 				
 			</section>
 		
