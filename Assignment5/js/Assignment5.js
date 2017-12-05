@@ -369,25 +369,10 @@ function Location(){
 			}
 		}
 
-
-    }
-
 function showPosition(position){
 	var latitude=position.coords.latitude;
 	var longitude=position.coords.longitude;
 	document.getElementById("latitude").innerHTML=latitude;
 	document.getElementById("longitude").innerHTML=longitude;
 	
-}
-/*CHECK OUT THIS FUNCTION-THERE IS AN EXACT LONG/LAT IN THE CENTER POS*/
-/*function Map2(){
-
-var mapOptions = {
-  zoom: 17,
-  center: new google.maps.LatLng(-34.397, 150.644),
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-var map = new google.maps.Map(document.getElementById('map_canvas'),
-    mapOptions);
-var GeoMarker = new GeolocationMarker(map);
 }
