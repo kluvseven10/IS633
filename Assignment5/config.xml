@@ -14,9 +14,7 @@
     <preference name="phonegap-version" value="cli-7.0.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
-    <plugin name="cordova-plugin-geolocation" source="npm" />    
-    
-    
+    <plugin name="cordova-plugin-geolocation" source="npm" />      
     <icon src="icon.png" platform="android" qualifier="ldpi" />
     <icon src="icon.png" platform="android" qualifier="mdpi" />
     <icon src="icon.png" platform="android" qualifier="hdpi" />
@@ -32,4 +30,10 @@
     <splash src="icon.png" platform="android" qualifier="port-xxhdpi" />
     <splash src="icon.png" platform="android" qualifier="land-xxhdpi" />
     <splash src="icon.png" platform="android" qualifier="xxxhdpi" />
+    <platform name="android">
+    <preference name="SplashScreen" value="screen" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashMaintainAspectRatio" value="false" />
+</platform>
 </widget>
