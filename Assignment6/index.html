@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mod 6, Assignment 6; IS633 - MOBILE</title>
+		<link rel="stylesheet" type="text/css" href="styles/Assignment6.css">
+		<script src="js/Assignment6.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script>
+			var objContact;
+			var picturesource;
+			var destinationtype;
+			document.addEventListener("deviceready",onDeviceReady,false);
+			function onDeviceReady()
+			{
+				picturesource = navigator.camera.PictureSourceType;
+				destinationtype = navigator.camera.DestinationType;
+				objContact = navigator.contacts.create();
+			}
+		</script>
+	</head>
+	<body>
+		<header id="header">
+			<h1>INTERNATIONAL FOODS, INC</h1>
+			<h2>Assignment 6</h2>
+			<h4>Contacts & Camera</h4>
+		</header>
+		
+		<main id="content">
+			<div id="filters">
+				<label class="static">Select an option:</label>
+				<select id="sectionSelector" onchange="ShowSection(this.value);">
+					<option value="default">Select...</option>
+					<option value="customerListing">Customer List</option>
+					<option value="orderHistory">Order History</option>
+					<option value="customerOrder">Current Orders</option>
+					<option value="geoLocation">Geographic Location</option>
+					<option value="camera">Camera</option>
+					<option value="contacts">Contacts</option>
+					<option value="about">About Us</option>
+				</select>
+				<hr />
+			</div>
+            
+            <section id="sectionHeader">
+				<h2 id="sectionTitle">Section Name</h2>
+				<input id="backButton" type="button" value="Back to Customer Listing" onclick="ShowSection('customerListing');" />
+            </section>
+		<!--select a customer name drop down-->
+            <section id="customerSelection">
+                <label class="static">Select a company name:</label>
+                <select id="customerNames" onchange="CustomerSelection(this.value);"></select>
+            </section>
+        
+		
+		<!--select a customer id down-->
+            <section id="customerSelection2">
+                <label class="static">Select a customer ID:</label>
+                <select id="customerIDs" onchange="CustomerSelection(this.value);"></select>
+            </section>
+			
+			<!--CUSTOMER LIST PAGE-->
+			<section id="customerListing">
+				<!--<input type="button" id="backButton" value="Add New Customer" onclick="createCust();"/>-->
+				<input type="button" id="backButton" value="Add New Customer" onclick="ShowSection('addcust');"/>
+				<table>
+					<thead>
+						<tr>
+                            <th>ID</th>
+                            <th>Name</th>
+							<th>City</th>
+							<th style="text-align: center;">Order Actions</th>
+							<th style="text-align: center;">Customer Actions</th>
+						</tr>
+					</thead>
+					<tbody id="customerRecord"></tbody>
+				</table>
+			</section>
+			
+						
+			<!--ORDER HISTORY PAGE-->
+            <section id="orderHistory">
+                <table>
+					<thead>
+						<tr>
+							<th>Product Name</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody id="customerOrderHistory"></tbody>
+				</table>
+			</section>
+
+			<!--CURRENT ORDERS PAGE-->
+			<section id="customerOrder">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Postal Code</th>
+                            <th style="text-align: center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customerOrders"></tbody>
+                </table>
+            </section>
+
+			<!--ADD A CUSTOMER-->
+	
+			<section id="addcust">
+				<label for="newID" class="fieldlabel">Customer ID:* (5 Uppercase characters only)</label>
+				<input id="newID" type="text" placeholder="ID" maxlength="5" style='text-transform:uppercase' />
+				<br>
+				<label for="newName" class="fieldlabel">Name:</label>
+				<input id="newName" type="text" placeholder="Name" style="width: 250px" />
+				<br>
+				<label for="newCity" class="fieldlabel">City:</label>
+				<input id="newCity" type="text" placeholder="City" style="width: 250px" />
+				<div id="actions">
+					<input type="button" value="Cancel & Go To Customer Listing" onclick="ShowSection('customerListing');" />
+					<input type="button" value="Save" onclick="createCust();" />
+				</div>
+			</section>
+			
+						
+			<!--EDIT CUSTOMER ORDER PAGE-->
+            <section id="orderEdit">
+                <label for="OrderID" class="fieldLabel">ID:</label>
+                <input id="OrderID" type="text" placeholder="ID" disabled="true" readonly />
+                <label for="ShipName" class="fieldLabel">Name:</label>
+                <input id="ShipName" type="text" placeholder="Name" style="width: 250px" />
+                <label for="ShipAddress" class="fieldLabel">Address:</label>
+                <input id="ShipAddress" type="text" placeholder="Address" style="width: 250px" />
+                <label for="ShipCity" class="fieldLabel">City:</label>
+                <input id="ShipCity" type="text" placeholder="City" style="width: 250px" />
+                <label for="ShipPostcode" class="fieldLabel">Postal Code:</label>
+                <input id="ShipPostcode" type="text" placeholder="Postal Code" style="width: 80px" />
+                <div id="actions">
+                    <input type="button" value="Cancel & Go To Customer Listing" onclick="ShowSection('customerListing');" />
+                    <input type="button" value="Save" onclick="updateOrderAddress();" />
+                </div>
+            </section>
+			
+			<section id="geoLocation">
+				<hr>
+				<button id="locationbutton" onclick="Location();" onlick="initMap();" >Find Current Location</button>
+				<br>
+				<br>
+				<label>Latitude:</label>
+				<label id="latitude">Latitude Result</label>
+				<br>
+				<label>Longitude:</label>
+				<label id="longitude">Longitude Result</label>
+				<br>
+				<script id="map">
+					function initMap() {
+					  var uluru = {lat: -25.363, lng: 131.044};
+					  var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 4,
+						center: uluru
+					  });
+					  var marker = new google.maps.Marker({
+						position: uluru,
+						map: map
+					  });
+					}
+				  </script>
+				  <script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrPMCBudCWiZorhtZCjW-J3aTWDYlWU4k&callback=initMap">
+				  </script>
+			</section>
+			
+			<section id="camera">
+				<hr>
+				<button id="takeAPic" onclick="CapturePhoto()">Take a Picture</button>
+				<br>
+				<img id="snapshot" src="" />
+			</section>
+			
+			<section id="contacts">
+				<hr>
+				<button id="accessContact" onclick="PickContact();">Contact List</button>
+				<br>
+				<br>
+				<button id="searchContact">Search by Last Name</button>
+				<br>
+				<br>
+				<label>Contact Name: </label>
+				<label id="contactname"></label>
+				<br>
+			</section>
+				
+			
+			<section id="about">
+                    <h2>About Us</h2>
+				<p>
+					This app will display your customer list and customer order history. If you select a Customer ID, in the Customer List page, you can view the customer's order history.
+				</p>
+				<h3>The Story</h3>
+				<p>
+					The tale begins when Rene von Reth of Essen left Germany for good in 1994: for seven years he was  travelling around the globe, working as a PADI Course Director (Train-the-
+					<br>Trainer and scuba diving instructor) which lead him to Australia, Thailand, the Maldives, Egypt, the Bermuda’s, the Caribbean and Spain. Once arrived, he would instinctively look
+					<br>for a German eatery to indulge in a pint of Erdinger and a pork shank.
+				</p>
+				<h4>Owner & Founder, Sherry La Russa</h4>
+			</section>
+		</main>
+		<div id="div_f">
+				<footer>
+					Sherry La Russa  |
+					<a href="mailto:sklr4315@uab.edu"> My Email</a>
+					
+				</footer>
+		</div>
+	</body>
+</html>
+
+
+       

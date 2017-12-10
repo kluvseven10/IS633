@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<widget
+    xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id = "edu.uab.business.studentapp"
+    versionCode = "1"
+    version = "0.0.1" >
+    <!-- versionCode is optional and Android only -->
+    <name>Mobile App Assignment 6</name>
+    <description>Mobile App Assignment 6</description>
+    <author>Sherry La Russa</author>
+    <preference name="phonegap-version" value="cli-7.0.1" />
+    <plugin name="cordova-plugin-whitelist" source="npm" />
+    <access origin="*" />
+    <plugin name="cordova-plugin-geolocation" source="npm" />      
+    <icon src="icon.png" platform="android" qualifier="ldpi" />
+    <icon src="icon.png" platform="android" qualifier="mdpi" />
+    <icon src="icon.png" platform="android" qualifier="hdpi" />
+    <icon src="icon.png" platform="android" qualifier="xhdpi" />
+    <icon src="icon.png" platform="android" qualifier="xxhdpi" />
+    <icon src="icon.png" platform="android" qualifier="xxxhdpi" />
+    <icon src="icon.png" platform="android" qualifier="fr-xxhdpi" />
+    <splash src="icon.png" platform="android" qualifier="ldpi" />
+    <splash src="icon.png" platform="android" qualifier="mdpi" />
+    <splash src="icon.png" platform="android" qualifier="hdpi" />
+    <splash src="icon.png" platform="android" qualifier="xhdpi" />
+    <splash src="icon.png" platform="android" qualifier="fr-xhdpi" />
+    <splash src="icon.png" platform="android" qualifier="port-xxhdpi" />
+    <splash src="icon.png" platform="android" qualifier="land-xxhdpi" />
+    <splash src="icon.png" platform="android" qualifier="xxxhdpi" />
+    <platform name="android">
+    <preference name="SplashScreen" value="screen" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashMaintainAspectRatio" value="false" />
+    <platform name="Android">
+        <plugin name="cordova-plugin-camera" source="npm" spec= "1.2.0"/>
+        <plugin name="cordova-pluing-contacts" source="npm" spec="1.1.0"/>
+    </platform>        
+</platform>
+</widget>
