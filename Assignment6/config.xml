@@ -34,6 +34,6 @@
         <plugin name="cordova-plugin-splashscreen" source="npm" spec="4.1.0"/>
         <preference name="SplashScreenDelay" value= "3000"/>
         <plugin name="cordova-plugin-camera" source="npm" spec="2.4.1"/>
-        <plugin name="cordova-pluing-contacts" source="npm" spec="2.3.1"/>
+        <plugin name="cordova-plugin-contacts" source="npm" spec="2.3.1"/>
     </platform>        
 </widget>
