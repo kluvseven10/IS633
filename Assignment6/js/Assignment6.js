@@ -472,7 +472,7 @@ function CapturePhoto(){
 }
 
 function onSuccess(imageURI){
-	var picdisplay = document.getElementById("snapshot");
+	var pickdisplay = document.getElementById("snapshot");
 	pickdisplay.style.display = 'block';
 	pickdisplay.src = imageURI
 }
