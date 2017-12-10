@@ -501,10 +501,8 @@ function PickContact(){
 				contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
 			}
 		}
-		{
 		document.getElementById("contactname").innerHTML = contactinfo;
-		},
-		function(err)
+		},function(err)
 		{
 			alert("Error: " + err);
 		}
