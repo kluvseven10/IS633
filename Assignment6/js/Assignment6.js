@@ -525,7 +525,7 @@ function searchContact(){
     navigator.contacts.find(fields, onSuccess, onError, options);
 }
 function onSuccess(contacts) {
-    alert('Found ' + contacts.length + ' contacts.');
+    /*alert('Found ' + contacts.length + ' contacts.');*/
     var count="";
     var table = document.createElement ("table");
     table = "<table border = 1><tr><th>Contact Name</th><th>Phone Numbers</th/</tr>";
