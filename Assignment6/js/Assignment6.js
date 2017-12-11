@@ -467,15 +467,15 @@ function watchMapPosition() {
 
 
 function CapturePhoto(){
-	navigator.camera.getPicture(onSuccess, onFail, {
-		quality: 20, correctOrientation: true, targetWidth: 300, destinationtype:
+	navigator.camera.getPicture(onSuccess, onFail,
+		{quality: 20, correctOrientation: true, targetWidth: 300, destinationtype:
 		destinationtype.FILE_URI, saveToPhotoAlbum: true });
 }
 
 function onSuccess(imageURI){
 	var pickdisplay = document.getElementById("snapshot");
 	pickdisplay.style.display = 'block';
-	pickdisplay.src = imageURI
+	pickdisplay.src = imageURI;
 }
 
 function onFail(message){
