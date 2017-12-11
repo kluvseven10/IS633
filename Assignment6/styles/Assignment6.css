@@ -211,3 +211,15 @@ section{
 		cursor: pointer;
 		background-color: #808080;
 	}
+	
+#searchcontactbutton{
+	border: #9DAEFA;
+		border-radius: 5px;
+		color: #555555;
+		margin-right: 7px;
+		padding: 7px;
+}
+	#searchcontactbutton:hover{
+		cursor: pointer;
+		background-color: #808080;
+	}
