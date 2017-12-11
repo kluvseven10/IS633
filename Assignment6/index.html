@@ -181,14 +181,18 @@
 			
 			<section id="contacts">
 				<hr>
-				<button id="accessContact" onclick="PickContact();">Contact List</button>
+				<button id="accessContact" onclick="PickContact();">Access Your Contact List</button>
 				<br>
 				<br>
-				<button id="searchContact">Search by Last Name</button>
-				<br>
-				<br>
-				<label>Contact Name: </label>
+				<label>Contact Information: </label>
 				<label id="contactname"></label>
+				<br>
+				<br>
+				<hr>
+				<label>Enter a Contact's Last Name:</label>
+				<input type="text" id="contactlast" style="width: 250px" ></input>
+				<button id="searchcontactbutton" onclick="searchContact();">Search</button>
+				<br>
 				<br>
 			</section>
 				
