@@ -468,8 +468,11 @@ function watchMapPosition() {
 
 function CapturePhoto(){
 	navigator.camera.getPicture(onSuccess, onFail,
-		{quality: 20, correctOrientation: true, targetWidth: 300, destinationtype:
-		destinationtype.FILE_URI, saveToPhotoAlbum: true });
+		{quality: 20,
+		correctOrientation: true,
+		targetWidth: 300,
+		destinationtype: destinationtype.FILE_URI,
+		saveToPhotoAlbum: true });
 }
 
 function onSuccess(imageURI){
@@ -488,13 +491,13 @@ function PickContact(){
 		var contactinfo = "";
 		contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
 		var count = 0;
-		if (contact.phoneNumbers !== null)
+		/*if (contact.phoneNumbers !== null)
 		{
 			for (count=0; count < contact.phoneNumbers.length; count++)
 			{
 				contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
 			}
-		}
+		}*/
 		if (contact.emails !== null)
 		{
 			for(count=0; count < contact.emails.length; count++)
@@ -525,7 +528,7 @@ function onSuccess(contacts) {
     alert('Found ' + contacts.length + ' contacts.');
     var count="";
     var table = document.createElement ("table");
-    table = "<table border = 1><tr><th>Contact Name</th></tr>";
+    table = "<table border = 1><tr><th>Contact Name</th><th>Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var phone = "";
@@ -537,7 +540,7 @@ function onSuccess(contacts) {
 		phone += contacts[i].phoneNumbers[count].value + ", ";
 		}
 				}
-		table += "<tr><td>" + (name) + "</td></tr>";
+		table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
 		
 		}
 		document.getElementById("contactlastname").innerHTML = table;
