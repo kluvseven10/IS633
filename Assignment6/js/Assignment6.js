@@ -469,8 +469,8 @@ function watchMapPosition() {
 function CapturePhoto(){
 	navigator.camera.getPicture(onSuccess, onFail,
 		{quality: 20,
-		/*correctOrientation: true,
-		targetWidth: 300,*/
+		correctOrientation: true,
+		targetWidth: 300,
 		destinationtype: destinationtype.FILE_URI,
 		saveToPhotoAlbum: true });
 }
