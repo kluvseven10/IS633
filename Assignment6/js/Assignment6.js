@@ -471,7 +471,7 @@ function CapturePhoto(){
 		{quality: 20,
 		/*correctOrientation: true,
 		targetWidth: 300,*/
-		destinationtype: destinationtype.FILE_URI,
+		destinationtype: navigator.camera.DestinationType.FILE_URI,
 		saveToPhotoAlbum: true });
 }
 
