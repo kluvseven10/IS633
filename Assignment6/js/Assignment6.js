@@ -491,13 +491,13 @@ function PickContact(){
 		var contactinfo = "";
 		contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
 		var count = 0;
-		/*if (contact.phoneNumbers !== null)
+		if (contact.phoneNumbers !== null)
 		{
 			for (count=0; count < contact.phoneNumbers.length; count++)
 			{
 				contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
 			}
-		}*/
+		}
 		if (contact.emails !== null)
 		{
 			for(count=0; count < contact.emails.length; count++)
@@ -522,10 +522,10 @@ function searchContact(){
     options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers];
     options.hasPhoneNumber = true;
     var fields = [navigator.contacts.fieldType.displayName];
-    navigator.contacts.find(fields, onSuccess, onError, options);
+    navigator.contacts.find(fields, onSuccessC, onErrorC, options);
 }
-function onSuccess(contacts) {
-    /*alert('Found ' + contacts.length + ' contacts.');*/
+function onSuccessC(contacts) {
+    alert('Found ' + contacts.length + ' contacts.');
     var count="";
     var table = document.createElement ("table");
     table = "<table border = 1><tr><th>Contact Name</th><th>Phone Numbers</th/</tr>";
@@ -546,7 +546,7 @@ function onSuccess(contacts) {
 		document.getElementById("contactlastname").innerHTML = table;
 
 }
-function onError(contactError) {
+function onErrorC(contactError) {
     alert('onError!');
 }
 
