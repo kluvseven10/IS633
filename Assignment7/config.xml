@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<widget
+    xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id = "edu.uab.business.studentapp"
+    versionCode = "1"
+    version = "0.0.1" >
+    <!-- versionCode is optional and Android only -->
+    <name>Mobile App Assignment 7</name>
+    <description>Mobile App Assignment 7</description>
+    <author>Sherry La Russa</author>
+    <preference name="phonegap-version" value="cli-7.0.1" />
+    <plugin name="cordova-plugin-whitelist" source="npm" />
+    <access origin="*" />
+    <icon src="icon.png" platform="android" qualifier="ldpi" />
+    <icon src="icon.png" platform="android" qualifier="mdpi" />
+    <icon src="icon.png" platform="android" qualifier="hdpi" />
+    <icon src="icon.png" platform="android" qualifier="xhdpi" />
+    <icon src="icon.png" platform="android" qualifier="xxhdpi" />
+    <icon src="icon.png" platform="android" qualifier="xxxhdpi" />
+    <icon src="icon.png" platform="android" qualifier="fr-xxhdpi" />
+    <splash src="icon.png" platform="android" qualifier="ldpi" />
+    <splash src="icon.png" platform="android" qualifier="mdpi" />
+    <splash src="icon.png" platform="android" qualifier="hdpi" />
+    <splash src="icon.png" platform="android" qualifier="xhdpi" />
+    <splash src="icon.png" platform="android" qualifier="fr-xhdpi" />
+    <splash src="icon.png" platform="android" qualifier="port-xxhdpi" />
+    <splash src="icon.png" platform="android" qualifier="land-xxhdpi" />
+    <splash src="icon.png" platform="android" qualifier="xxxhdpi" />
+    <platform name="android">
+        <plugin name="cordova-plugin-splashscreen" source="npm" spec="4.1.0"/>
+        <preference name="SplashScreenDelay" value= "3000"/>
+        <plugin name="cordova-plugin-geolocation" source="npm" spec="2.4.3"/>
+        <plugin name="cordova-plugin-camera" source="npm" spec="2.4.1"/>
+        <plugin name="cordova-plugin-contacts" source="npm" spec="2.3.1"/>
+        <plugin name="cordova-plugin-inappbrowser" source="npm"/>
+        <plugin name="cordova-plugin-device" source="npm" spec="1.1.3"/>
+        <plugin name="cordova-plugin-vibration" source="npm" spec="2.1.6"/>
+    </platform>        
+</widget>
